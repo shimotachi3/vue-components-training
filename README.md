@@ -70,20 +70,20 @@ Create and render an `IdCard` component with 6 props:
 
 ```jsx
 <IdCard
-  lastName='Doe'
-  firstName='John'
+  last-name='Doe'
+  first-name='John'
   gender='male'
   :height="178"
-  :birth="new Date("1992-07-14")"
+  :birth='new Date("1992-07-14")'
   picture="https://randomuser.me/api/portraits/men/44.jpg"
 />
 
 <IdCard
-  lastName='Delores '
-  firstName='Obrien'
+  last-name='Delores '
+  first-name='Obrien'
   gender='female'
   :height="172"
-  :birth="new Date("1988-05-11")"
+  :birth='new Date("1988-05-11")'
   picture="https://randomuser.me/api/portraits/women/44.jpg"
 />
 ```
@@ -91,6 +91,10 @@ Create and render an `IdCard` component with 6 props:
 **Expected Output:**
 
 ![image](https://user-images.githubusercontent.com/5306791/52976030-22b0d200-33c8-11e9-91fe-e3ce0fa14078.png)
+
+This component is partially implemented.
+[Help - Components and passing props](https://vuejs.org/guide/essentials/component-basics.html#passing-props)
+[Help - Passing different prop types](https://vuejs.org/guide/components/props.html#passing-different-value-types)
 
 ---
 
@@ -107,8 +111,8 @@ The component should display a random integer in the range between the `min` and
 **Example:**
 
 ```jsx
-<Random min={1} max={6}/>
-<Random min={1} max={100}/>
+<Random :min="1" :max="6"/>
+<Random :min="1" :max="100"/>
 ```
 
 **Expected Output:**
@@ -119,7 +123,7 @@ The component should display a random integer in the range between the `min` and
 
 ### Iteration 3 | Component: `BoxColor`
 
-Create a `BoxColor` component that displays a rectangle with a background color based on props. For this, you will need to add inline styles ([documentation](https://reactjs.org/docs/dom-elements.html#style)).
+Create a `BoxColor` component that displays a rectangle with a background color based on props. For this, you will need to add inline styles ([documentation](https://vuejs.org/guide/essentials/class-and-style.html#binding-inline-styles)).
 
 The component should take 3 props:
 
@@ -130,8 +134,8 @@ The component should take 3 props:
 **Example:**
 
 ```jsx
-<BoxColor r={255} g={0} b={0} />
-<BoxColor r={128} g={255} b={0} />
+    <BoxColor :r="255" :g="0" :b="0" />
+    <BoxColor :r="128" :g="255" :b="0" />
 ```
 
 **Expected Output:**
@@ -162,38 +166,38 @@ Take your time to make the component look as close to the _expected output_ as p
 **Example:**
 
 ```jsx
-<CreditCard
-  type="Visa"
-  number="0123456789018845"
-  expirationMonth={3}
-  expirationYear={2021}
-  bank="BNP"
-  owner="Maxence Bouret"
-  bgColor="#11aa99"
-  color="white"
-/>
+    <CreditCard
+      type="Visa"
+      number="0123456789018845"
+      :expiration-month="3"
+      :expiration-year="2021"
+      bank="BNP"
+      owner="Maxence Bouret"
+      bg-color="#11aa99"
+      color="white"
+    />
 
-<CreditCard
-  type="Master Card"
-  number="0123456789010995"
-  expirationMonth={3}
-  expirationYear={2021}
-  bank="N26"
-  owner="Maxence Bouret"
-  bgColor="#eeeeee"
-  color="#222222"
-/>
+    <CreditCard
+      type="Master Card"
+      number="0123456789010995"
+      :expiration-month="3"
+      :expiration-year="2021"
+      bank="N26"
+      owner="Maxence Bouret"
+      bg-color="#eeeeee"
+      color="#222222"
+    />
 
-<CreditCard
-  type="Visa"
-  number="0123456789016984"
-  expirationMonth={12}
-  expirationYear={2019}
-  bank="Name of the Bank"
-  owner="Firstname Lastname"
-  bgColor="#ddbb55"
-  color="white"
-/>
+    <CreditCard
+      type="Visa"
+      number="0123456789016984"
+      :expiration-month="12"
+      :expiration-year="2019"
+      bank="Name of the Bank"
+      owner="Firstname Lastname"
+      bg-color="#ddbb55"
+      color="white"
+    />
 ```
 
 **Expected Output:**
@@ -204,21 +208,24 @@ Take your time to make the component look as close to the _expected output_ as p
 
 ### Iteration 5 | Component: `Greetings`
 
-Create a `Greetings` component with 2 props:
+Create a `Greetings` component with 1 props:
 
 - `lang`: A string that can have values: `"de"`, `"en"`, `"es"` or `"fr"`
-- `children`: A text
+
+You must also pass the text between the `<Greetings>` tags. That's called [Slots](https://vuejs.org/guide/essentials/component-basics.html#content-distribution-with-slots) 
 
 The component should display a greeting text in the chosen language.
 
 **Example:**
 
 ```jsx
-<Greetings lang="de">Ludwig</Greetings>
-<Greetings lang="fr">François</Greetings>
+<Greetings lang="de"><span style="color: yellow">Ludwig</span></Greetings>
+<Greetings lang="fr"><strong>François</strong></Greetings>
 ```
 
 **Expected Output:**
+
+**Important**: This is not the exact output. You should see the color of the text of Ludwing in yellow, whereas François should be between `strong` tags.
 
 ![image](https://user-images.githubusercontent.com/5306791/52957158-57edfd80-3391-11e9-8726-93c1a3389016.png)
 
@@ -228,19 +235,16 @@ The component should display a greeting text in the chosen language.
 
 Create a `Rating` component that displays 5 stars. Depending on the value received, some stars should be empty (☆), and some should be filled (★).
 
-The component should take 1 prop:
-
-- `children`: A number between `0` and `5`. The value can be a floating-point number. If the number received is `3.9`, the component should display 4 stars.
 
 **Example:**
 
 ```jsx
-<Rating>0</Rating>
-<Rating>1.49</Rating>
-<Rating>1.5</Rating>
-<Rating>3</Rating>
-<Rating>4</Rating>
-<Rating>5</Rating>
+    <Rating :rate="0" />
+    <Rating :rate="1.49" />
+    <Rating :rate="1.5" />
+    <Rating :rate="3" />
+    <Rating :rate="4" />
+    <Rating :rate="5" />
 ```
 
 **Expected Output:**
@@ -260,28 +264,25 @@ The component should take 4 props:
 - `img`: A string
 - `car`: An object with properties `model` and `licensePlate`.
 
+Notice that you can use the component created in Iteration 6 in this Driver Card component.
+
 **Example**
 
 ```jsx
-<DriverCard
-  name="Travis Kalanick"
-  rating={4.2}
-  img="https://si.wsj.net/public/resources/images/BN-TY647_37gql_OR_20170621052140.jpg?width=620&height=428"
-  car={{
-    model: "Toyota Corolla Altis",
-    licensePlate: "CO42DE"
-  }}
-/>
+  <DriverCard
+      name="Travis Kalanick"
+      :rating="4.2"
+      img="https://si.wsj.net/public/resources/images/BN-TY647_37gql_OR_20170621052140.jpg?width=620&height=428"
+      :car="{ model: 'Toyota Corolla Altis', licensePlate: 'CO42DE' }"
+    />
 
-<DriverCard
-  name="Dara Khosrowshahi"
-  rating={4.9}
-  img="https://ubernewsroomapi.10upcdn.com/wp-content/uploads/2017/09/Dara_ELT_Newsroom_1000px.jpg"
-  car={{
-    model: "Audi A3",
-    licensePlate: "BE33ER"
-  }}
-/>
+    <DriverCard
+      name="Dara Khosrowshahi"
+      :rating="4.9"
+      img="https://ubernewsroomapi.10upcdn.com/wp-content/uploads/2017/09/Dara_ELT_Newsroom_1000px.jpg"
+      :car="{ model: 'Audi A3', licensePlate: 'BE33ER' }"
+    />
+  </div>
 ```
 
 **Expected Output:**
@@ -393,7 +394,7 @@ The component should take 1 prop:
 **Example:**
 
 ```jsx
-<NumbersTable limit={12} />
+<NumbersTable :limit={12} />
 ```
 
 **Expected Output:**
