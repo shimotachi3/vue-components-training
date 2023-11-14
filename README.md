@@ -3,6 +3,7 @@
 # LAB | Vue3 Training
 
 This exercise allows you to practice and apply the concepts and techniques taught in class.
+This is a free adaptation from [this exercise](https://github.com/ironhack-labs/lab-react-training) so some errors may be expected.
 
 Upon completion of this exercise, you will be able to:
 
@@ -316,7 +317,7 @@ Create a `ClickablePicture` component that displays a picture. On each click, th
 **Example:**
 
 ```jsx
-<ClickablePicture img="maxence.png" imgClicked="maxence-glasses.png" />
+<ClickablePicture img="maxence.png" img-clicked="maxence-glasses.png" />
 ```
 
 **Expected Output:**
@@ -465,17 +466,8 @@ For this, you will need 3 state variables:
 - `password`
 - `nationality`
 
-If you want to include Bootstrap with [Reactstrap](https://reactstrap.github.io), you should run
 
-```sh
-npm install reactstrap bootstrap
-```
-
-And add the following line in `src/index.js`
-
-```js
-import "bootstrap/dist/css/bootstrap.min.css";
-```
+Try installing Bootstrao or PicoCSS to markup easily the form.
 
 **Example**
 
@@ -515,24 +507,10 @@ The `RGBColorPicker` should render 3 `SingleColorPicker` components and send the
 **Example:**
 
 ```jsx
-<SingleColorPicker
-  color="r"
-  value={rValue}
-  onChange={ () => { /* ... */ }  }
-/>
-
-<SingleColorPicker
-  color="g"
-  value={gValue}
-  onChange={ () => { /* ... */ }  }
-/>
-
-<SingleColorPicker
-  color="b"
-  value={bValue}
-  onChange={ () => { /* ... */ }  }
-/>
-```
+ <SingleColorPicker color="r" :value="rValue" @change="updateColor('r', $event)" />
+    <SingleColorPicker color="g" :value="gValue" @change="updateColor('g', $event)" />
+    <SingleColorPicker color="b" :value="bValue" @change="updateColor('b', $event)" />
+ ```
 
 **Expected Output**
 
