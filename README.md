@@ -143,7 +143,7 @@ The component should take 3 props:
 
 ![image](https://user-images.githubusercontent.com/5306791/52957816-ec0c9480-3392-11e9-9e00-67094fa2b431.png)
 
-As a bonus, you can also display the hex values of the color (e.g., `#ff0000` for red).
+**Bonus**: Make the text color to always have a good contrast, whatever the color of the background is (you will need JavaScript for this)
 
 ---
 
