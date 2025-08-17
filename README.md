@@ -207,32 +207,8 @@ Take your time to make the component look as close to the _expected output_ as p
 
 ---
 
-### Iteration 5 | Component: `Greetings`
 
-Create a `Greetings` component with 1 props:
-
-- `lang`: A string that can have values: `"de"`, `"en"`, `"es"` or `"fr"`
-
-You must also pass the text between the `<Greetings>` tags. That's called [Slots](https://vuejs.org/guide/essentials/component-basics.html#content-distribution-with-slots) 
-
-The component should display a greeting text in the chosen language.
-
-**Example:**
-
-```jsx
-<Greetings lang="de"><span style="color: blue"> 😁Ludwig 😁</span></Greetings>
-<Greetings lang="fr"><strong>François</strong></Greetings>
-```
-
-**Expected Output:**
-
-**Important**: This is not the exact output. You should see the color of the text of Ludwing in yellow, whereas François should be between `strong` tags.
-
-![image](https://user-images.githubusercontent.com/5306791/52957158-57edfd80-3391-11e9-8726-93c1a3389016.png)
-
----
-
-### Iteration 6 | Component: `Rating`
+### Iteration 5 | Component: `Rating`
 
 Create a `Rating` component that displays 5 stars. Depending on the value received, some stars should be empty (☆), and some should be filled (★).
 
@@ -254,7 +230,7 @@ Create a `Rating` component that displays 5 stars. Depending on the value receiv
 
 ---
 
-### Iteration 7 | Component: `DriverCard`
+### Iteration 6 | Component: `DriverCard`
 
 Create a `DriverCard` component that displays a rectangle with content based on the received props.
 
@@ -292,7 +268,7 @@ Notice that you can use the component created in Iteration 6 in this Driver Card
 
 ---
 
-### Iteration 8 | State: `LikeButton`
+### Iteration 7 | State: `LikeButton`
 
 Create a `LikeButton` component that displays a button with the initial text `"0 Likes"`. With each click, the number of Likes should increase.
 
@@ -310,7 +286,7 @@ As a bonus, implement the background color change on each click. You can use the
 
 ---
 
-### Iteration 9: State: `ClickablePicture`
+### Iteration 8: State: `ClickablePicture`
 
 Create a `ClickablePicture` component that displays a picture. On each click, the picture should toggle between the two images passed through the props.
 
@@ -328,7 +304,7 @@ PS: If you want to use your picture instead, you can create it using this pictur
 
 ---
 
-### Iteration 10 | State: `Dice`
+### Iteration 9 | State: `Dice`
 
 Create a `Dice` component that displays a picture with the random dice value (example: `'../assets/images/dice3.png'`).
 
@@ -357,7 +333,7 @@ Every time the user clicks on the component, it should:
 
 ---
 
-### Iteration 11 | State: `Carousel`
+### Iteration 10 | State: `Carousel`
 
 Create a `Carousel` component that displays an image and two buttons (<kbd>Left</kbd> and <kbd>Right</kbd>), which change the picture on each click, respectively.
 
@@ -384,7 +360,7 @@ The component should take 1 prop:
 
 ---
 
-### Iteration 12 | List and Keys | `NumbersTable`
+### Iteration 11 | List and Keys | `NumbersTable`
 
 Create a `NumbersTable` component that displays a list of numbers between `1` and the `limit`. Even numbers must be colored in red.
 
@@ -404,7 +380,7 @@ The component should take 1 prop:
 
 ---
 
-### Iteration 13 | List and Keys - `FaceBook` (Simple)
+### Iteration 12 | List and Keys - `FaceBook` (Simple)
 
 Create a `FaceBook` component that displays the list of all profiles coming from the file `src/data/berlin.json`. Remember to import the json data in the component:
 
@@ -424,7 +400,7 @@ import profiles from "./data/berlin.json";
 
 ---
 
-### Iteration 14 | List and Keys - `FaceBook` (Advanced)
+### Iteration 13 | List and Keys - `FaceBook` (Advanced)
 
 Update your `FaceBook` component and add a button for each country the students come from; Each student object has a `country` property. When the user clicks on the button with the country name (example: <kbd>USA</kbd>), add a blue background to all the profiles where the `country` is the one selected.
 
@@ -446,7 +422,7 @@ Update your `FaceBook` component and add a button for each country the students 
 
 ---
 
-### Iteration 15 | Form - `SignupPage`
+### Iteration 14 | Form - `SignupPage`
 
 Create a `SignupPage` component with the following elements:
 
@@ -481,7 +457,7 @@ Try installing Bootstrao or PicoCSS to markup easily the form.
 
 ---
 
-### Iteration 16 | Lifting State Up - `RGBColorPicker`
+### Iteration 15 | Lifting State Up - `RGBColorPicker`
 
 Create 2 components:
 
