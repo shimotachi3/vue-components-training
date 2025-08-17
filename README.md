@@ -220,7 +220,7 @@ The component should display a greeting text in the chosen language.
 **Example:**
 
 ```jsx
-<Greetings lang="de"><span style="color: yellow">Ludwig</span></Greetings>
+<Greetings lang="de"><span style="color: blue"> 😁Ludwig 😁</span></Greetings>
 <Greetings lang="fr"><strong>François</strong></Greetings>
 ```
 
