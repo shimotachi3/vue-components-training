@@ -10,7 +10,7 @@ const fillStarts = computed(() => {
     return Math.round(props.rate)
 })
 
-const emptyStars = computed(() => {
+const emptyStarts = computed(() => {
     return Math.round(5 - props.rate)
 })
 
@@ -19,7 +19,7 @@ const emptyStars = computed(() => {
 <template>
     <div>
         <span class="filled" v-for="r in fillStarts">★</span>
-        <span class="empty"  v-for="r in emptyStars">☆</span>
+        <span class="empty"  v-for="r in emptyStarts">☆</span>
     </div>
 </template>
 
