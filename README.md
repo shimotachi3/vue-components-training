@@ -46,6 +46,12 @@ $ npm run dev
   git push origin master
   ```
 
+## AI recommendations
+
+- Remember not to ask the AI for the direct solution, because you will skip key parts of the learning process (you can specify to the AI not to give you the direct result in any case)
+- You can ask for examples of similar exercises for inspiration.
+- ONCE you have finished the component and it works, you can ask the AI for the strengths and weaknesses of your solution. In any case, be aware of your current stage in the training and your previous knowledge (sometimes the information generated can be overwhelming)
+
 ## Instructions
 
 ### Iteration 0 | Components folder
